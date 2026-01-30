@@ -9,7 +9,7 @@ export default function AddConnection(props) {
   const { onClose, dataSources, stripeCode, xeroCode, qbCode, qbRealmId } =
     props;
 
-  // 'connect', 'paypal', or 'chargebee'
+  // 'connect', 'paypal'
   const [activePopup, setActivePopup] = useState("connect");
 
   // Shared PayPal sync state
@@ -51,7 +51,6 @@ export default function AddConnection(props) {
           qbRealmId={qbRealmId}
           onClose={handleCloseAll}
           onOpenPaypalPopup={() => setActivePopup("paypal")}
-          onOpenChargebeePopup={() => setActivePopup("chargebee")}
           paypalSyncState={paypalSyncState}
           setPaypalSyncState={setPaypalSyncState}
         />
